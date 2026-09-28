@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "RSC Classic Reader",
+  "version": "1.0.2",
+  "description": "RSCの論文一覧を読みやすいクラシック表示に整えます。",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "RSC Classic Reader",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://pubs.rsc.org/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "classic.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
